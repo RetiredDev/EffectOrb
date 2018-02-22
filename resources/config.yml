@@ -1,0 +1,29 @@
+---
+# Effects for each orb
+# Use effect IDs
+
+first-orb:
+- "1"
+- "5"
+- "3"
+
+second-orb:
+- "8"
+- "5"
+- "14"
+
+third-orb:
+- "10"
+- "8"
+- "5"
+
+fourth-orb:
+- "11"
+- "14"
+- "5"
+
+fifth-orb:
+- "13"
+- "16"
+- "12"
+...
