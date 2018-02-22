@@ -32,13 +32,13 @@ class Main extends PluginBase implements Listener {
 			
 			if(count($args) < 1) {
 			
-				$sender->sendMessage("§cPlease use: /orb <player>");
+				$sender->sendMessage(TF::RED . "Please use: /orb <player>");
 				return true;
 			 
 			}
 			$player = $sender->getServer()->getPlayer($args[0]);
 		   if(!$player instanceof Player) {
-			   $sender->sendMessage("§cPlayer not found!");
+			   $sender->sendMessage(TF::RED . "Player not found!");
 			   return true;
 			   
 			   }
@@ -46,7 +46,7 @@ class Main extends PluginBase implements Listener {
 				
 									
 							$orb = Item::get(Item::SLIME_BALL, 2, 1);
-							$orb->setCustomName(TF::RESET . TF::BOLD . TF::LIGHT_GREEN . "Effect Orb" . TF::RESET . TF::GRAY . " (Tap anywhere)" . PHP_EOL . PHP_EOL . 
+							$orb->setCustomName(TF::RESET . TF::BOLD . TF::GREEN . "Effect Orb" . TF::RESET . TF::GRAY . " (Tap anywhere)" . PHP_EOL . PHP_EOL . 
 							TF::DARK_GRAY . " *" . TF::AQUA . " Chance to get: " . PHP_EOL .
 							TF::DARK_GRAY . " *" . TF::GRAY . "Effects");
 							
@@ -57,13 +57,13 @@ class Main extends PluginBase implements Listener {
 			
 			if(!$sender->hasPermission("orb.cmd")) {
 				
-				$sender->sendMessage("§cYou don't have permission to use this command.");
+				$sender->sendMessage(TF::RED . "You don't have permission to use this command.");
 				
 			}
 			
 			else {
 				
-				$sender->sendMessage("§aSuccessfully added the Effect Orb.");
+				$sender->sendMessage(TF::GREEN . "Successfully added the Effect Orb.");
 				
 		}
 		
@@ -98,7 +98,7 @@ $effect->setDuration("60" * 5);
                                                     $player->addEffect($effect);
 				    }
 				
-				$player->addTitle("§eUsed §aEffect Orb");
+				$player->addTitle(TF::YELLOW . "Used" . TF::GREEN . "Effect Orb");
 				$player->getInventory()->removeItem($orb);
 				
 				break;
@@ -116,7 +116,7 @@ $effect->setDuration("60" * 5);
                                                     $player->addEffect($effect);
 				    }
 				
-				$player->addTitle("§eUsed §aEffect Orb");
+				$player->addTitle(TF::YELLOW . "Used" . TF::GREEN . "Effect Orb");
 				$player->getInventory()->removeItem($orb);
 				
 				break;
@@ -134,7 +134,7 @@ $effect->setDuration("60" * 5);
                                                     $player->addEffect($effect);
 				    }
 				
-				$player->addTitle("§eUsed §aEffect Orb");
+				$player->addTitle(TF::YELLOW . "Used" . TF::GREEN . "Effect Orb");
 				$player->getInventory()->removeItem($orb);
 				
 				break;
@@ -152,7 +152,7 @@ $effect->setDuration("60" * 5);
                                                     $player->addEffect($effect);
 				    }
 				
-				$player->addTitle("§eUsed §aEffect Orb");
+				$player->addTitle(TF::YELLOW . "Used" . TF::GREEN . "Effect Orb");
 				$player->getInventory()->removeItem($orb);
 				
 				break;
@@ -170,7 +170,7 @@ $effect->setDuration("60" * 5);
                                                     $player->addEffect($effect);
 	            }
 				
-				$player->addTitle("§eUsed §aEffect Orb");
+				$player->addTitle(TF::YELLOW . "Used" . TF::GREEN . "Effect Orb");
 				$player->getInventory()->removeItem($orb);
 				
 				break;
