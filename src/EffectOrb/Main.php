@@ -48,7 +48,7 @@ class Main extends PluginBase implements Listener {
 							$orb = Item::get(Item::SLIME_BALL, 2, 1);
 							$orb->setCustomName(TF::RESET . TF::BOLD . TF::GREEN . "Effect Orb" . TF::RESET . TF::GRAY . " (Tap anywhere)" . PHP_EOL . PHP_EOL . 
 							TF::DARK_GRAY . " *" . TF::AQUA . " Chance to get: " . PHP_EOL .
-							TF::DARK_GRAY . " *" . TF::GRAY . "Effects");
+							TF::DARK_GRAY . " *" . TF::GRAY . " Effects");
 							
 							$player->getInventory()->addItem($orb);
 
@@ -91,14 +91,10 @@ class Main extends PluginBase implements Listener {
    
 				foreach($this->getConfig()->get("first-orb") as $effects) {
 				
-$effect = Effect::getEffect($effects);
-
-$effect->setDuration("60" * 5);
-                                                    $effect->setAmplifier("3");
-                                                    $player->addEffect($effect);
+                $player->addEffect(Effect::getEffect($effects)->setDuration(180*20)->setAmplifier(3));
 				    }
 				
-				$player->addTitle(TF::YELLOW . "Used" . TF::GREEN . "Effect Orb");
+				$player->addTitle(TF::YELLOW . "Used " . TF::GREEN . "Effect Orb");
 				$player->getInventory()->removeItem($orb);
 				
 				break;
@@ -109,14 +105,10 @@ $effect->setDuration("60" * 5);
    
 				foreach($this->getConfig()->get("second-orb") as $effects) {
 				
-$effect = Effect::getEffect($effects);
-
-$effect->setDuration("60" * 5);
-                                                    $effect->setAmplifier("3");
-                                                    $player->addEffect($effect);
+                $player->addEffect(Effect::getEffect($effects)->setDuration(180*20)->setAmplifier(3));
 				    }
 				
-				$player->addTitle(TF::YELLOW . "Used" . TF::GREEN . "Effect Orb");
+				$player->addTitle(TF::YELLOW . "Used " . TF::GREEN . "Effect Orb");
 				$player->getInventory()->removeItem($orb);
 				
 				break;
@@ -127,14 +119,10 @@ $effect->setDuration("60" * 5);
    
 				foreach($this->getConfig()->get("third-orb") as $effects) {
 				
-$effect = Effect::getEffect($effects);
-
-$effect->setDuration("60" * 5);
-                                                    $effect->setAmplifier("3");
-                                                    $player->addEffect($effect);
+                $player->addEffect(Effect::getEffect($effects)->setDuration(180*20)->setAmplifier(3));
 				    }
 				
-				$player->addTitle(TF::YELLOW . "Used" . TF::GREEN . "Effect Orb");
+				$player->addTitle(TF::YELLOW . "Used " . TF::GREEN . "Effect Orb");
 				$player->getInventory()->removeItem($orb);
 				
 				break;
@@ -145,14 +133,10 @@ $effect->setDuration("60" * 5);
    
 				foreach($this->getConfig()->get("fourth-orb") as $effects) {
 				
-$effect = Effect::getEffect($effects);
-
-$effect->setDuration("60" * 5);
-                                                    $effect->setAmplifier("3");
-                                                    $player->addEffect($effect);
+                $player->addEffect(Effect::getEffect($effects)->setDuration(180*20)->setAmplifier(3));
 				    }
 				
-				$player->addTitle(TF::YELLOW . "Used" . TF::GREEN . "Effect Orb");
+				$player->addTitle(TF::YELLOW . "Used " . TF::GREEN . "Effect Orb");
 				$player->getInventory()->removeItem($orb);
 				
 				break;
@@ -163,14 +147,10 @@ $effect->setDuration("60" * 5);
    
 				foreach($this->getConfig()->get("fifth-orb") as $effects) {
 				
-$effect = Effect::getEffect($effects);
-
-$effect->setDuration("60" * 5);
-                                                    $effect->setAmplifier("3");
-                                                    $player->addEffect($effect);
+                $player->addEffect(Effect::getEffect($effects)->setDuration(180*20)->setAmplifier(3));
 	            }
 				
-				$player->addTitle(TF::YELLOW . "Used" . TF::GREEN . "Effect Orb");
+				$player->addTitle(TF::YELLOW . "Used " . TF::GREEN . "Effect Orb");
 				$player->getInventory()->removeItem($orb);
 				
 				break;
